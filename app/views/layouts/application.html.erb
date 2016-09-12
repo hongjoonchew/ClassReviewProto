@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Proto</title>
+    <title>Homepage</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,15 +9,65 @@
   </head>
 <style type="text/css">
 .myclass{
-   background-color: #aaa;
-   padding: 10px;
-   font-family:Comic Sans MS;
+	height:10%;
+   background-color: #99ccff;
+   padding: 5px;
+   font-family:Times New Roman;
+}
+.topcorner1{
+  position:relative;
+   top:2;
+   right:5px;
+       -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    float:right;
+    text-decoration: none;
+    color: initial;
+}
+.topcorner2{
+  position:relative;
+   top:-0px;
+   right:20px;
+       -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    float:right;
+    text-decoration: none;
+    color: initial;
+}
+.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    float:right;
+    text-decoration: none;
+    color: initial;
+}
+.centerImage
+{
+
+ text-align:center;
+display:block;
 }
 </style>
-<header class = "myclass"><h1> Classify</h1></header>
+<header class = "myclass">
+	
+	<div> 
+    <h1> Classify</h1>
+    <h3>
+	<a class = "topcorner1" href = "http://localhost:3000/reviews/help">Help</a>
+	<a class = "topcorner2" href = "http://localhost:3000/reviews/reviewform">Review a class</a></h3>
+	<div>
+</header>
   <body>
-  	
-    <%= yield %>
-    
+        <div class="centerImage">
+      <a href="http://localhost:3000/reviews/review">
+        <img src="http://www.greenexamacademy.com/wp-content/uploads/theme-uploads/leed-live-classes.jpg" alt="HTML tutorial" style="width:25%;height:25%;border:0;">
+</a>
+    </div>
+  	<div style="text-align:center;" "font-family:Times New Roman">
+  		<%= yield %>
+  	</div>
   </body>
 </html>
