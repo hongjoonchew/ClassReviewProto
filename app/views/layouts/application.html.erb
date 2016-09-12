@@ -4,11 +4,20 @@
     <title>Proto</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'default', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<style type="text/css">
+.myclass{
+   background-color: #aaa;
+   padding: 10px;
+   font-family:Comic Sans MS;
+}
+</style>
+<header class = "myclass"><h1> Classify</h1></header>
   <body>
+  	
     <%= yield %>
+    
   </body>
 </html>
