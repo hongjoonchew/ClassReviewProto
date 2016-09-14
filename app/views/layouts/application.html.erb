@@ -34,32 +34,16 @@ display:block;
 }
 </style>
 <header class = "myclass"> <font size = 8>Classify </font>
-      <!input class="topcorner1" type = "button" value="Review a course" href = "http://localhost:3000/home/review">
-      <!input class="topcorner1" type = "button" value="Add a course" href ="http://localhost:3000/home/courseform">
-      <!input class="topcorner1" type = "button" value="Help" href="http://localhost:3000/home/help">
-      <!input class="topcorner1" type = "button" value="Help" href="http://localhost:3000/users/sign_in">
-
-      <form action="http://localhost:3000/home/review">
-          <input type="submit" value="Review a course">
-      </form>
-
-      <form action="http://localhost:3000/home/courseform">
-          <input type="submit" value="Add a course">
-      </form>
-
-      <form action="http://localhost:3000/home/help">
-          <input type="submit" value="Help">
-      </form>
+      <input onclick = "location.href='http://localhost:3000/home/review';" class="topcorner1" type = "button" value="Review a course"></input>
+      <input onclick = "location.href='http://localhost:3000/home/courseform';" class="topcorner1" type = "button" value="Add a course"></input>
+      <input onclick = "location.href='http://localhost:3000/home/help';" class="topcorner1" type = "button" value="Help"></input>
+      <!input onclick = "location.href='http://localhost:3000/home/help';" class="topcorner1" type = "button" value="Help">
 
       <% if user_signed_in? %>
-        <li>
           <%= link_to "Logout", destroy_user_session_path,:method=>:delete, :data => { :no_turbolink => false } %>
-        </li>
       <% else %>
-        <li>
           <%= link_to "Login", new_user_session_path  %>
           <%= link_to "Sign Up", new_user_registration_path  %>
-        </li>
       <% end %>
 
 
@@ -73,7 +57,7 @@ display:block;
       <p class="alert"><%= alert %></p>
     </div>
     <div style="text-align:center;" "font-family:Times New Roman">
-      <%= yield %>
+      <center><%= yield %></center> 
     </div>
   </body>
 </html>
