@@ -1,10 +1,10 @@
-class CreateAddReviews < ActiveRecord::Migration[5.0]
+class CreateForms < ActiveRecord::Migration[5.0]
   def change
-    create_table :add_reviews do |t|
+    create_table :forms do |t|
+      t.string :user_id
       t.string :class
       t.string :professor
       t.string :review
-      t.string :user_id
 
       t.timestamps
     end
