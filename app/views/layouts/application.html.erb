@@ -13,7 +13,15 @@
    background-color: #99ccff;
    padding: 5px;
    font-family:Times New Roman;
+   text-decoration: none;
 }
+
+a:link, a:visited {
+	text-decoration: none;
+	color: blue;
+	font-family:sans-serif;
+}
+
 .topcorner1{
   position:relative;
    top:10px;
@@ -33,7 +41,7 @@
 display:block;
 }
 </style>
-<header class = "myclass"> <font size = 8>Classify </font>
+<header class = "myclass"> <font size = 8><a href= "http://localhost:3000/">Classify </font>
       <input onclick = "location.href='http://localhost:3000/home/review';" class="topcorner1" type = "button" value="Review a course"></input>
       <input onclick = "location.href='http://localhost:3000/home/courseform';" class="topcorner1" type = "button" value="Add a course"></input>
       <input onclick = "location.href='http://localhost:3000/home/help';" class="topcorner1" type = "button" value="Help"></input>
