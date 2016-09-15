@@ -2,12 +2,12 @@
 
 one:
   user_id: MyString
-  class: MyString
+  course: MyString
   professor: MyString
   review: MyString
 
 two:
   user_id: MyString
-  class: MyString
+  course: MyString
   professor: MyString
   review: MyString

@@ -3,8 +3,8 @@ Enter Your Review
 <hr>
 <%= form_for @form do |a| -%>
   Username: <%= a.text_field :user_id %><br />
-  Class: <%= a.text_field :class %><br />
+  Class: <%= a.text_field :course %><br />
   Professor: <%= a.text_field :professor %><br />
   Review: <%= a.text_field :review %><br />
-  <%= a.submit %>
+  <%= a.submit value="Submit" %>
 <% end -%>
