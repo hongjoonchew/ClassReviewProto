@@ -43,7 +43,7 @@ display:block;
 </style>
 <header class = "myclass"> <font size = 8>Classify </font>
       <input onclick = "location.href='http://localhost:3000/forms/new';" class="topcorner1" type = "button" value="Review a course"></input>
-      <input onclick = "location.href='http://localhost:3000/home/courseform';" class="topcorner1" type = "button" value="Add a course"></input>
+      <!input onclick = "location.href='http://localhost:3000/home/courseform';" class="topcorner1" type = "button" value="Add a course"><!/input>
       <input onclick = "location.href='http://localhost:3000/home/help';" class="topcorner1" type = "button" value="Help"></input>
       <!input onclick = "location.href='http://localhost:3000/home/help';" class="topcorner1" type = "button" value="Help">
 
@@ -58,14 +58,13 @@ display:block;
 </header>
   <body bgcolor = "#f0ffff">
         <div class="centerImage">
-      <a href="http://localhost:3000/reviews/review">
         <img src="http://www.greenexamacademy.com/wp-content/uploads/theme-uploads/leed-live-classes.jpg" alt="HTML tutorial" style="width:25%;height:25%;border:0;">
-</a>
       <!alert for users>
       <p class="alert"><%= alert %></p>
     </div>
     <div style="text-align:center;" "font-family:Times New Roman">
       <center><%= yield %></center>
+      <h3> Reviews needed to be listed</h3>
     </div>
     <footer align ="center">
         <p><font size = 2> @2016 classify.com / All rights reserved/ Powered by FOhF.</font></p>
