@@ -10,6 +10,13 @@ def create
   end
 end
 
+  def show
+  end
+
+  def index
+    @form = Form.all
+  end
+
 private
 
   def form_params
