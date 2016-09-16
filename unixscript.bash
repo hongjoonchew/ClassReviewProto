@@ -1,2 +1,2 @@
 gnome-terminal -e rails server
-xdg-open http:\\localhost:3000
+xdg-open http://localhost:3000
