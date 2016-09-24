@@ -27,24 +27,24 @@ a:link, a:visited {
    top:10px;
    right:5px;
    float:right;
-       -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
     height: 50px;
     text-decoration: none;
     color: initial;
 }
 .centerImage
 {
-
+    position:relative;
+   top:100px;
+   right:5px;
  text-align:center;
 display:block;
 }
 </style>
-<header class = "myclass"> <font size = 8><a href="http://localhost:3000/home/index.html/">Classify </font>
-      <input onclick = "location.href='http://localhost:3000/forms/new';" class="topcorner1" type = "button" value="Review a course"></input>
+<header class = "myclass"> 
+  <a href="http://localhost:3000/home/index.html"><img src="/logo.png" alt ="Classify" height = "100px" width = "150px"></a>
       <!input onclick = "location.href='http://localhost:3000/home/courseform';" class="topcorner1" type = "button" value="Add a course"><!/input>
-      <input onclick = "location.href='http://localhost:3000/home/help';" class="topcorner1" type = "button" value="Help"></input>
+      <a class = "topcorner1" href="http://localhost:3000/home/help"><img src="/help.png" alt ="Help"></a>
+      <!input onclick = "location.href='http://localhost:3000/home/help';" class="topcorner1" type = "button" value="Help"><!/input>
       <!input onclick = "location.href='http://localhost:3000/home/help';" class="topcorner1" type = "button" value="Help">
 
       <% if user_signed_in? %>
@@ -57,8 +57,10 @@ display:block;
 
 </header>
   <body bgcolor = "#f0ffff">
-        <div class="centerImage">
-        <img src="http://www.greenexamacademy.com/wp-content/uploads/theme-uploads/leed-live-classes.jpg" alt="HTML tutorial" style="width:25%;height:25%;border:0;">
+    <div class="centerImage">
+    <a href="http://localhost:3000/home/courseform"><img src="/add.png" alt ="Add a course"></a>
+    <a href="http://localhost:3000/forms/new"><img src="/view.png" alt ="View a course"></a>
+        <!img src="http://www.greenexamacademy.com/wp-content/uploads/theme-uploads/leed-live-classes.jpg" alt="HTML tutorial" style="width:25%;height:25%;border:0;">
       <!alert for users>
       <p class="alert"><%= alert %></p>
     </div>
