@@ -1,10 +1,9 @@
-
-Enter Your Review
+Enter Class Information
 <hr>
-<%= form_for @form do |a| -%>
+<%= form_for @course do |a| -%>
   Username: <%= a.text_field :user_id %><br />
   Class: <%= a.text_field :course %><br />
   Professor: <%= a.text_field :professor %><br />
-  Review: <%= a.text_field :review %><br />
+  Description: <%= a.text_field :description %><br />
   <%= a.submit value="Submit" %>
 <% end -%>
