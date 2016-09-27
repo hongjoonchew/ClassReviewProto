@@ -10,7 +10,7 @@
 <style type="text/css">
 .myclass{
   height:10%;
-   background-color: #99ccff;
+   background-color: #0277bd;
    padding: 5px;
    font-family:Times New Roman;
    text-decoration: none;
@@ -18,8 +18,10 @@
 
 a:link, a:visited {
 	text-decoration: none;
-	color: blue;
+	color: #8bc34a;
+  font-size: 20px;
 	font-family:sans-serif;
+  padding: 7px;
 }
 
 .topcorner1{
@@ -41,32 +43,25 @@ display:block;
 }
 </style>
 <header class = "myclass">
-  <a href="http://localhost:3000/home/index.html"><img src="/logo.png" alt ="Classify" height = "100px" width = "150px"></a>
-      <!input onclick = "location.href='http://localhost:3000/home/courseform';" class="topcorner1" type = "button" value="Add a course"><!/input>
+  <a href="http://localhost:3000/home/index.html"><img src="/logoC.png" alt ="Classify" height = "100px" width = "250px"></a>
       <a class = "topcorner1" href="http://localhost:3000/home/help"><img src="/help.png" alt ="Help"></a>
-      <!input onclick = "location.href='http://localhost:3000/home/help';" class="topcorner1" type = "button" value="Help"><!/input>
-      <!input onclick = "location.href='http://localhost:3000/home/help';" class="topcorner1" type = "button" value="Help">
-
       <% if user_signed_in? %>
-          <%= link_to "Logout", destroy_user_session_path,:method=>:delete, :data => { :no_turbolink => false } %>
-      <% else %>
+          <%= link_to "Logout ", destroy_user_session_path,:method=>:delete, :data => { :no_turbolink => false } %>
+      <% else %> <span "font-color:white">
           <%= link_to "Login", new_user_session_path  %>
           <%= link_to "Sign Up", new_user_registration_path  %>
       <% end %>
-
-
 </header>
-  <body bgcolor = "#f0ffff">
-    <div class="centerImage">
-        <!img src="http://www.greenexamacademy.com/wp-content/uploads/theme-uploads/leed-live-classes.jpg" alt="HTML tutorial" style="width:25%;height:25%;border:0;">
-      <!alert for users>
-      <p class="alert"><%= alert %></p>
-    </div>
-    <div style="text-align:center;" "font-family:Times New Roman">
-      <center><%= yield %></center>
-    </div>
-    <footer align ="center">
-        <p><font size = 2> @2016 classify.com / All rights reserved/ Powered by FOhF.</font></p>
-    </footer>
-  </body>
+
+<body bgcolor = "#b2cdff">
+  <div class="centerImage">
+       <p class="alert"><%= alert %></p>
+  </div>
+  <div style="text-align:center;" "font-family:Times New Roman">
+    <center><%= yield %></center>
+  </div>
+  <footer align ="center">
+    <p><font size = 2> @2016 classify.com / All rights reserved/ Powered by FOhF.</font></p>
+  </footer>
+</body>
 </html>
