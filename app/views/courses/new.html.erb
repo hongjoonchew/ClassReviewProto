@@ -1,9 +1,12 @@
-<h3>Enter Class Information </h3>
+<h1>Enter Class Information </h1>
 <hr>
-<%= form_for @course do |a| -%>
-  Username: <%= a.text_field :user_id %><br />
-  Class: <%= a.text_field :course %><br />
-  Professor: <%= a.text_field :professor %><br />
-  Description: <%= a.text_field :description %><br />
-  <%= a.submit value="Submit" %>
+<%= form_for @course do |a| -%> 
+  Username: <%= a.text_field :user_id %><br /> <br>
+  Class: <%= a.text_field :course %><br /><br>
+  Professor: <%= a.text_field :professor %><br /> <br>
+  Description: <%= a.text_field :description %><br /><br>
+<div class ="btn btn-lg"><font color = "black">
+  <%= a.submit value="Submit" %></font>
+  </div>
+  
 <% end -%>
