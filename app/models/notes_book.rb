@@ -1,0 +1,2 @@
+class NotesBook < ApplicationRecord
+end
