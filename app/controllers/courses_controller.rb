@@ -20,6 +20,6 @@ end
 private
 
   def course_params
-    params.require(:course).permit(:user_id, :course, :professor, :description)
+    params.require(:course).permit(:course_id, :description)
   end
 end
