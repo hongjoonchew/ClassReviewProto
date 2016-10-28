@@ -2,14 +2,14 @@
 
 one:
   review_id: MyString
-  review: MyString
+  review: MyText
   email: MyString
-  password: MyString
   course_id: MyString
+  professor: MyString
 
 two:
   review_id: MyString
-  review: MyString
+  review: MyText
   email: MyString
-  password: MyString
   course_id: MyString
+  professor: MyString

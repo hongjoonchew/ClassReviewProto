@@ -2,12 +2,10 @@
 
 one:
   help_id: MyString
-  question: MyString
+  question: MyText
   email: MyString
-  password: MyString
 
 two:
   help_id: MyString
-  question: MyString
+  question: MyText
   email: MyString
-  password: MyString

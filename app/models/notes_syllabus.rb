@@ -1,2 +1,0 @@
-class NotesSyllabus < ApplicationRecord
-end

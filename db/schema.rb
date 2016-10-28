@@ -10,65 +10,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024194133) do
+ActiveRecord::Schema.define(version: 20161028071921) do
+
+  create_table "books", force: :cascade do |t|
+    t.string   "ISBN"
+    t.string   "book_name"
+    t.string   "material_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string   "course_id"
     t.string   "name"
-    t.string   "description"
-    t.string   "email"
-    t.string   "password"
+    t.text     "description"
+    t.string   "material_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "helps", force: :cascade do |t|
     t.string   "help_id"
-    t.string   "question"
+    t.text     "question"
     t.string   "email"
-    t.string   "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "materials", force: :cascade do |t|
+    t.string   "books"
+    t.string   "Syllabus"
+    t.text     "notes"
+    t.string   "material_id"
+    t.string   "professor"
+    t.string   "course_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "notes", force: :cascade do |t|
     t.string   "note_id"
-    t.string   "course_id"
-    t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "notes_books", force: :cascade do |t|
-    t.string   "book"
-    t.string   "note_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "notes_notes", force: :cascade do |t|
-    t.string   "note"
-    t.string   "note_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "notes_syllabuses", force: :cascade do |t|
-    t.string   "syllabus"
-    t.string   "note_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "note"
+    t.string   "material_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string   "review_id"
-    t.string   "review"
+    t.text     "review"
     t.string   "email"
-    t.string   "password"
     t.string   "course_id"
+    t.string   "professor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "syllabis", force: :cascade do |t|
+    t.string   "syllabus_id"
+    t.string   "syllabus_title"
+    t.string   "material_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|

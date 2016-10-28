@@ -2,12 +2,10 @@
 
 one:
   note_id: MyString
-  course_id: MyString
-  email: MyString
-  password: MyString
+  note: MyText
+  material_id: MyString
 
 two:
   note_id: MyString
-  course_id: MyString
-  email: MyString
-  password: MyString
+  note: MyText
+  material_id: MyString

@@ -3,9 +3,8 @@ class CreateCourses < ActiveRecord::Migration[5.0]
     create_table :courses do |t|
       t.string :course_id
       t.string :name
-      t.string :description
-      t.string :email
-      t.string :password
+      t.text :description
+      t.string :material_id
 
       t.timestamps
     end
