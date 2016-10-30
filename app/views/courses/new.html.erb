@@ -1,8 +1,8 @@
 <h1>Enter Class Information </h1>
 <hr>
 <%= form_for @course do |a| -%>
-  Class: <%= a.text_field :course_id %><br /><br>
-  Description: <%= a.text_area :description %><br /><br>
+  Class: <font color = "black"><%= a.text_field :course_id %><br /><br></font>
+  Description: <font color = "black"><%= a.text_area :description %><br /><br></font>
 <div class ="btn btn-lg"><font color = "black">
   <%= a.submit value="Submit" %></font>
   </div>

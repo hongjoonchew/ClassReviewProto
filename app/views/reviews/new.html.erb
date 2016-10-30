@@ -2,9 +2,9 @@
 Enter Your Review
 <hr>
 <%= form_for @review do |a| -%>
-  Username: <%= a.text_field :user_id %><br />
-  Class: <%= a.text_field :course %><br />
-  Professor: <%= a.text_field :professor %><br />
-  Review: <%= a.text_field :review %><br />
+  Username: <font color = "black"><%= a.text_field :user_id %><br /></font>
+  Class: <font color = "black"><%= a.text_field :course %><br /></font>
+  Professor: <font color = "black"><%= a.text_field :professor %><br /></font>
+  Review: <font color = "black"><%= a.text_field :review %><br /></font>
   <%= a.submit value="Submit" %>
 <% end -%>

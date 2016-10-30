@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Classify" company="FourOhFour" webLink="http://" view-date="2016-09-16" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.8.1" locale="en_US">
+    <description><![CDATA[The description of the course and the reviews written by the students who have already taken that course help other students to know which course is appropriate for them for the given semester.
+Classify receives user inputs about class in SJSU. Students who have taken the particular courses can give reviews and tips about the courses. They can share the guidelines, green sheets and difficulty of the exams. Students can suggest what knowledge they should have before class. This website can also help determine how knowledgeable and useful, or easy and passable a class is.
+]]></description>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Name" width="199" order="0"/>
+        <field id="tpd4" name="Begin date" width="75" order="1"/>
+        <field id="tpd5" name="End date" width="75" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Functional_specification" color="#000000" meeting="false" start="2016-09-19" duration="4" complete="0" expand="true">
+            <task id="2" name="Functional_req" color="#8cb6ce" meeting="false" start="2016-09-19" duration="2" complete="0" expand="true">
+                <depend id="4" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="3" name="Non-functional_req" color="#8cb6ce" meeting="false" start="2016-09-19" duration="2" complete="0" expand="true">
+                <depend id="4" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="4" name="Use cases" color="#8cb6ce" meeting="false" start="2016-09-21" duration="2" complete="0" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="12" name="preliminary func_doc" color="#8cb6ce" meeting="true" start="2016-09-23" duration="0" complete="0" expand="true">
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+                <depend id="16" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="15" name="Conceptual_design" color="#000000" meeting="false" start="2016-09-23" duration="6" complete="0" expand="true">
+            <task id="16" name="revised functional_doc" color="#8cb6ce" meeting="false" start="2016-09-23" duration="1" complete="0" expand="true">
+                <depend id="20" type="2" difference="0" hardness="Strong"/>
+                <depend id="24" type="2" difference="0" hardness="Strong"/>
+                <depend id="28" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="20" name="Mock web pages" color="#000000" meeting="false" start="2016-09-26" duration="4" complete="0" expand="true">
+                <task id="24" name="Controller model" color="#8cb6ce" meeting="false" start="2016-09-26" duration="4" complete="0" expand="true"/>
+                <task id="28" name="View model" color="#8cb6ce" meeting="false" start="2016-09-26" duration="4" complete="0" expand="true">
+                    <depend id="29" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="29" name="Marketing brochure" color="#8cb6ce" meeting="false" start="2016-09-30" duration="1" complete="0" expand="true">
+                <depend id="35" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="35" name="Final conceptual design" color="#8cb6ce" meeting="true" start="2016-10-03" duration="0" complete="0" expand="true">
+                <depend id="36" type="2" difference="0" hardness="Strong"/>
+                <depend id="37" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="36" name="MVC Architechture" color="#000000" meeting="false" start="2016-10-03" duration="12" complete="0" expand="true">
+            <task id="37" name="Class diagram" color="#8cb6ce" meeting="false" start="2016-10-03" duration="2" complete="0" expand="true">
+                <depend id="38" type="2" difference="0" hardness="Strong"/>
+                <depend id="43" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="38" name="Squence diagram" color="#8cb6ce" meeting="false" start="2016-10-05" duration="1" complete="0" expand="true"/>
+            <task id="43" name="ER Diagram" color="#8cb6ce" meeting="false" start="2016-10-05" duration="1" complete="0" expand="true">
+                <depend id="45" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="45" name="Relational diagram" color="#8cb6ce" meeting="false" start="2016-10-06" duration="1" complete="0" expand="true">
+                <depend id="47" type="2" difference="0" hardness="Strong"/>
+                <depend id="49" type="2" difference="0" hardness="Strong"/>
+                <depend id="57" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="47" name="Model componenets" color="#8cb6ce" meeting="false" start="2016-10-07" duration="8" complete="0" expand="true"/>
+            <task id="49" name="View components" color="#8cb6ce" meeting="false" start="2016-10-07" duration="8" complete="0" expand="true"/>
+            <task id="57" name="Controller components" color="#8cb6ce" meeting="false" start="2016-10-07" duration="8" complete="0" expand="true">
+                <depend id="58" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="58" name="Design_document" color="#8cb6ce" meeting="true" start="2016-10-19" duration="0" complete="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Shivi" function="Default:0" contacts="shivangiagarwal53@gmail.com" phone=""/>
+        <resource id="1" name="Stan" function="Default:0" contacts="laostan@gmail.com" phone=""/>
+        <resource id="2" name="Nishtha" function="Default:0" contacts="np1goal@gmail.com" phone=""/>
+        <resource id="3" name="Joon" function="Default:0" contacts="hongjoon.chew@gmail.com" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="4" resource-id="0" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="12" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="28" resource-id="0" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="29" resource-id="0" function="Default:0" responsible="false" load="25.0"/>
+        <allocation task-id="35" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="43" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="45" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="49" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="58" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="2" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="4" resource-id="1" function="Default:0" responsible="false" load="25.0"/>
+        <allocation task-id="12" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="24" resource-id="1" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="35" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="47" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="57" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="58" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="2" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="4" resource-id="2" function="Default:0" responsible="false" load="25.0"/>
+        <allocation task-id="12" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="28" resource-id="2" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="38" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="49" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="58" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="37" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="3" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="4" resource-id="3" function="Default:0" responsible="false" load="25.0"/>
+        <allocation task-id="12" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="24" resource-id="3" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="29" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="47" resource-id="3" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="57" resource-id="3" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="58" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="35" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
