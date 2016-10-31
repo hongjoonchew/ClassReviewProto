@@ -1,4 +1,8 @@
 class CoursesController < ApplicationController
+  def courselist
+    @data = Course.all
+  end
+  
   def new
     @course  = Course.new
   end

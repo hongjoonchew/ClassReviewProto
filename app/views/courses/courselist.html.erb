@@ -1,2 +1,14 @@
 <h1>Courses#courselist</h1>
 <p>Find me in app/views/courses/courselist.html.erb</p>
+<table>
+  <tr>
+    <th>Course</th>
+    <th>Description</th>
+  </tr>
+<% @data.each do |data| %>
+  <tr>
+    <td><%= data.course_id %></td>
+    <td><%= data.description %></td>
+  </tr>
+<% end %>
+</table>
