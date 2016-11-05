@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><project name="Classify" company="FourOhFour" webLink="http://" view-date="2016-11-16" view-index="1" gantt-divider-location="353" resource-divider-location="300" version="2.8.1" locale="en_US">
     <description><![CDATA[The description of the course and the reviews written by the students who have already taken that course help other students to know which course is appropriate for them for the given semester.
 Classify receives user inputs about class in SJSU. Students who have taken the particular courses can give reviews and tips about the courses. They can share the guidelines, green sheets and difficulty of the exams. Students can suggest what knowledge they should have before class. This website can also help determine how knowledgeable and useful, or easy and passable a class is.
@@ -8,6 +9,17 @@ Classify receives user inputs about class in SJSU. Students who have taken the p
         <field id="tpd5" name="End date" width="72" order="2"/>
         <option id="taskLabelRight" value="resources"/>
         <timeline><![CDATA[128,131,135]]></timeline>
+=======
+<?xml version="1.0" encoding="UTF-8"?><project name="Classify" company="FourOhFour" webLink="http://" view-date="2016-10-16" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.8.1" locale="en_US">
+    <description><![CDATA[The description of the course and the reviews written by the students who have already taken that course help other students to know which course is appropriate for them for the given semester.
+Classify receives user inputs about class in SJSU. Students who have taken the particular courses can give reviews and tips about the courses. They can share the guidelines, green sheets and difficulty of the exams. Students can suggest what knowledge they should have before class. This website can also help determine how knowledgeable and useful, or easy and passable a class is.
+]]></description>
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd3" name="Name" width="190" order="0"/>
+        <field id="tpd4" name="Begin date" width="72" order="1"/>
+        <field id="tpd5" name="End date" width="72" order="2"/>
+        <option id="color.recent"><![CDATA[#ffffff]]></option>
+>>>>>>> origin/master
     </view>
     <view id="resource-table">
         <field id="0" name="Name" width="199" order="0"/>
@@ -37,8 +49,14 @@ Classify receives user inputs about class in SJSU. Students who have taken the p
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
+<<<<<<< HEAD
         <task id="0" name="Functional_specification" color="#000000" meeting="false" start="2016-09-19" duration="4" complete="100" expand="true">
             <task id="2" name="Functional_req" color="#8cb6ce" meeting="false" start="2016-09-19" duration="2" complete="100" expand="true">
+=======
+        <task id="66" name="Working Draft of Rails" color="#8cb6ce" meeting="true" start="2016-09-16" duration="0" complete="0" expand="true"/>
+        <task id="0" name="Functional_specification" color="#000000" meeting="false" start="2016-09-19" duration="4" complete="0" expand="true">
+            <task id="2" name="Functional_req" color="#8cb6ce" meeting="false" start="2016-09-19" duration="2" complete="0" expand="true">
+>>>>>>> origin/master
                 <depend id="4" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="3" name="Non-functional_req" color="#8cb6ce" meeting="false" start="2016-09-19" duration="2" complete="100" expand="true">
@@ -183,7 +201,17 @@ Classify receives user inputs about class in SJSU. Students who have taken the p
         <task id="194" name="Finalization" color="#8cb6ce" meeting="false" start="2016-12-06" duration="4" complete="0" expand="true">
             <depend id="135" type="2" difference="0" hardness="Strong"/>
         </task>
+<<<<<<< HEAD
         <task id="135" name="Product ship date" color="#8cb6ce" meeting="true" start="2016-12-12" duration="0" complete="0" expand="true"/>
+=======
+        <task id="67" name="Basic Database Models" color="#8cb6ce" meeting="true" start="2016-10-21" duration="0" complete="0" expand="true"/>
+        <task id="70" name="Linking Databases" color="#8cb6ce" meeting="false" start="2016-10-21" duration="18" complete="0" expand="true">
+            <depend id="69" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="69" name="Code Review" color="#8cb6ce" meeting="true" start="2016-11-16" duration="0" complete="0" expand="true"/>
+        <task id="62" name="App Demo" color="#8cb6ce" meeting="true" start="2016-12-06" duration="0" complete="0" expand="true"/>
+        <task id="59" name="Product Launch" color="#8cb6ce" meeting="true" start="2016-12-12" duration="0" complete="0" expand="true"/>
+>>>>>>> origin/master
     </tasks>
     <resources>
         <resource id="0" name="Shivi" function="Default:0" contacts="shivangiagarwal53@gmail.com" phone=""/>
