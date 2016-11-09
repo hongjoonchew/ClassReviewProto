@@ -10,68 +10,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161028071921) do
+ActiveRecord::Schema.define(version: 20161109031318) do
 
-  create_table "books", force: :cascade do |t|
-    t.string   "ISBN"
+  create_table "books", primary_key: "ISBN", id: :string, force: :cascade do |t|
     t.string   "book_name"
-    t.string   "material_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ISBN"], name: "sqlite_autoindex_books_1", unique: true
   end
 
-  create_table "courses", force: :cascade do |t|
-    t.string   "course_id"
+  create_table "courses", primary_key: "course_id", id: :string, force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.string   "material_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["course_id"], name: "sqlite_autoindex_courses_1", unique: true
   end
 
-  create_table "helps", force: :cascade do |t|
-    t.string   "help_id"
+  create_table "helps", primary_key: "help_id", id: :string, force: :cascade do |t|
     t.text     "question"
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["help_id"], name: "sqlite_autoindex_helps_1", unique: true
   end
 
-  create_table "materials", force: :cascade do |t|
+  create_table "materials", primary_key: "material_id", id: :string, force: :cascade do |t|
     t.string   "books"
     t.string   "Syllabus"
     t.text     "notes"
-    t.string   "material_id"
-    t.string   "professor"
-    t.string   "course_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "notes", force: :cascade do |t|
-    t.string   "note_id"
-    t.text     "note"
-    t.string   "material_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.string   "review_id"
-    t.text     "review"
-    t.string   "email"
-    t.string   "course_id"
     t.string   "professor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["material_id"], name: "sqlite_autoindex_materials_1", unique: true
   end
 
-  create_table "syllabis", force: :cascade do |t|
-    t.string   "syllabus_id"
+  create_table "notes", primary_key: "note_id", id: :string, force: :cascade do |t|
+    t.text     "note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["note_id"], name: "sqlite_autoindex_notes_1", unique: true
+  end
+
+  create_table "reviews", primary_key: "review_id", id: :string, force: :cascade do |t|
+    t.text     "review"
+    t.string   "email"
+    t.string   "professor"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "sqlite_autoindex_reviews_1", unique: true
+  end
+
+  create_table "syllabis", primary_key: "syllabus_id", id: :string, force: :cascade do |t|
     t.string   "syllabus_title"
-    t.string   "material_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.index ["syllabus_id"], name: "sqlite_autoindex_syllabis_1", unique: true
   end
 
   create_table "users", force: :cascade do |t|
