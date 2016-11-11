@@ -1,47 +1,59 @@
 <html>
-    <br>
-    
-    <br>
-    <br>
+
     <head>
-        <font size = 5 face="Arial" >Help/FAQ</font>
-     <hr>
+        <font face="Arial" color =#0277bd ><h1>Help/FAQ</h1></font>
+        <hr>
+        <style>
+            
+        body
+        {
+            text-align: left;
+        }
+            
+        </style>
     </head>
 <br>
     
-    <body bgcolor = "#f0ffff" face="Arial" align = "left">
-        <ul align = "left">
-            <li><font color = "blue">How do I review a professor?</font></li>
-            <p> &emsp;&emsp;Search for your professor using search tab and select "Review him/her". </p><br>
-            <li><font color = "blue">How do I add my class?</font></li>
-            <p> &emsp;&emsp;Click on add button on home page below search bar. Search for your class and click on add button.  </p><br>
-            <li><font color = "blue">Will the professor ever know what I gave him/her review?</font></li>
-            <p> &emsp;&emsp;No, your reviews are confidential and no professor can see reviewer's identity. </p><br>
-            <li><font color = "blue">Can I delete my review later?</font></li>
-            <p> &emsp;&emsp;Yes, you can. </p><br>
-            <li><font color = "blue">Why was my review deleted?</font></li>
-            <p> &emsp;&emsp;If your review does not help others, it is automatically dropped. </p><br>
+    <body bgcolor = "#f0ffff">
+        <ul>
+            <li><font color = #0277bd>How do I review a professor?</font></li>
+            <p> Search for your professor using search tab and select "Review him/her". </p><br>
+            <li><font color = #0277bd>How do I add my class?</font></li>
+            <p> Click on add button on home page below search bar. Search for your class and click on add button.  </p><br>
+            <li><font color = #0277bd>Will the professor ever know what I gave him/her review?</font></li>
+            <p> No, your reviews are confidential and no professor can see reviewer's identity. </p><br>
+            <li><font color = #0277bd>Can I delete my review later?</font></li>
+            <p> Yes, you can. </p><br>
+            <li><font color = #0277bd>Why was my review deleted?</font></li>
+            <p>If your review does not help others, it is automatically dropped. </p><br>
         </ul>
         
         <br>
         <br>
-        
-        <input onclick = "location.href='http://localhost:3000/';" class="bottomcorner" type="button" value="Home">
-        <style type="text/css">
-            .bottomcorner{
-                position:relative;
-                top:10px;
-                right:5px;
-                float:right;
-                -webkit-appearance: button;
-                -moz-appearance: button;
-                appearance: button;
-                text-decoration: none;
-                color: initial;
-                }
+        <a href="http://localhost:3000" class="btn btn-default btn-lg">Home</a>
+        <br>
 
-
-        </style>
+        <hr>
+        <font size = 6><b>Other problems:</b></font>
+        <br>
+        <br>
+        <p style="text-align:left; margin-left: 80px;">Who are you? 
+           <p style="color:black; text-align:left;  margin-left: 80px;"> <select>
+            <optgroup lable = "student/professor">
+                <option value = "student">student</option>
+                <option value="professor">professor</option>
+            </optgroup>
+            </select></p>
+        <br>
+        <p style="text-align:left;  margin-left: 80px;">What problems do you face?</p>    
+        <p style="color:black; text-align:left;  margin-left: 80px;"><textarea rows="5" col = "100">  </textarea></p>
+        <br>
+        <p style="text-align:left;  margin-left: 80px;">Your email:</p>
+        <p style="color:black; text-align:left;  margin-left: 80px;"><font color=black><textarea rows="1" col = "50"> </textarea></font></p>
+        <br>
+        <br>
+        <br>
+        <br>
         </input>
     </body>
 </html>

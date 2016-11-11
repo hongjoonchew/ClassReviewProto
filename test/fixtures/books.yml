@@ -1,13 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  course_id: MyString
-  name: MyString
-  description: MyText
+  ISBN: MyString
+  book_name: MyString
   material_id: MyString
 
 two:
-  course_id: MyString
-  name: MyString
-  description: MyText
+  ISBN: MyString
+  book_name: MyString
   material_id: MyString

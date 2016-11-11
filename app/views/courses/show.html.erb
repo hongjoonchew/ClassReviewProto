@@ -1,6 +1,6 @@
-<h1>Course List</h1>
+<h1>Course</h1>
 <hr>
-<!--<p>Find me in app/views/courses/courselist.html.erb</p>-->
+
 <br>
 <br>
 <head>
@@ -66,20 +66,11 @@
             <table>
                 <tr bgcolor="black" style="color:white;">
                 <b>
-                <th>Course </th>
-                <th>Description</th>
                 <th>Reviews</th>
-                <th>Study Material</th>
+                <th>Description</th>
                 </b>
                 </tr>
 
-                <% @data.each do |data| %>
-                <tr>
-                <td><%= link_to data.course_id, data%></td>
-                <td><%=data.description %></td>
-                <td>link </td>
-                </tr>
-                <% end %>
             </div>
         </div>
     </div>
