@@ -3,9 +3,10 @@ class CreateNotes < ActiveRecord::Migration[5.0]
     create_table :notes, id:false do |t|
       t.string :note_id, primary_key:true
       t.text :note
-      add_foreign_key :materials,:notes, name:"material_id"
 
       t.timestamps
     end
+    add_reference :notes, :material, type: :string
+    add_foreign_key :notes, :materials
   end
 end

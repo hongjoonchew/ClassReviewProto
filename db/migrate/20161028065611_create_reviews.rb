@@ -5,9 +5,12 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.text :review
       t.string :email
       t.string :professor
-      add_foreign_key :courses ,:reviews, name: "course_id"
 
       t.timestamps
     end
+      add_reference :reviews, :course, type: :string
+      add_foreign_key :reviews, :courses
+      add_reference :reviews, :user, type: :string
+      add_foreign_key :reviews, :users
   end
 end

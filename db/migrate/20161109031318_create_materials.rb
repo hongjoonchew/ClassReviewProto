@@ -6,9 +6,16 @@ class CreateMaterials < ActiveRecord::Migration[5.0]
       t.text :notes
       t.string :material_id, primary_key:true
       t.string :professor
-      add_foreign_key :courses ,:materials, name: "course_id"
 
       t.timestamps
     end
+    add_reference :materials,:course,type: :string
+    add_reference :materials,:book,type: :string
+    add_reference :materials,:note, type: :string
+    add_reference :materials,:syllabi,type: :string
+    add_foreign_key :courses ,:materials
+    add_foreign_key :books,:materials
+    add_foreign_key :notes,:materials
+    add_foreign_key :syllabis,:materials
   end
 end

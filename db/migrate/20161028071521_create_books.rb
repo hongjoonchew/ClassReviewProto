@@ -3,9 +3,10 @@ class CreateBooks < ActiveRecord::Migration[5.0]
     create_table :books, id:false do |t|
       t.string :ISBN, primary_key:true
       t.string :book_name
-      add_foreign_key :materials,:books, name:"material_id"
 
       t.timestamps
     end
+    add_reference :books, :material, type: :string
+    add_foreign_key :books, :materials
   end
 end

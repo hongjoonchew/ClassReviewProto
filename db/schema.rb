@@ -14,9 +14,11 @@ ActiveRecord::Schema.define(version: 20161109031318) do
 
   create_table "books", primary_key: "ISBN", id: :string, force: :cascade do |t|
     t.string   "book_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "material_id"
     t.index ["ISBN"], name: "sqlite_autoindex_books_1", unique: true
+    t.index ["material_id"], name: "index_books_on_material_id"
   end
 
   create_table "courses", primary_key: "course_id", id: :string, force: :cascade do |t|
@@ -24,7 +26,9 @@ ActiveRecord::Schema.define(version: 20161109031318) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "material_id"
     t.index ["course_id"], name: "sqlite_autoindex_courses_1", unique: true
+    t.index ["material_id"], name: "index_courses_on_material_id"
   end
 
   create_table "helps", primary_key: "help_id", id: :string, force: :cascade do |t|
@@ -42,13 +46,23 @@ ActiveRecord::Schema.define(version: 20161109031318) do
     t.string   "professor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "course_id"
+    t.string   "book_id"
+    t.string   "note_id"
+    t.string   "syllabi_id"
+    t.index ["book_id"], name: "index_materials_on_book_id"
+    t.index ["course_id"], name: "index_materials_on_course_id"
     t.index ["material_id"], name: "sqlite_autoindex_materials_1", unique: true
+    t.index ["note_id"], name: "index_materials_on_note_id"
+    t.index ["syllabi_id"], name: "index_materials_on_syllabi_id"
   end
 
   create_table "notes", primary_key: "note_id", id: :string, force: :cascade do |t|
     t.text     "note"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "material_id"
+    t.index ["material_id"], name: "index_notes_on_material_id"
     t.index ["note_id"], name: "sqlite_autoindex_notes_1", unique: true
   end
 
@@ -58,13 +72,19 @@ ActiveRecord::Schema.define(version: 20161109031318) do
     t.string   "professor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "course_id"
+    t.string   "user_id"
+    t.index ["course_id"], name: "index_reviews_on_course_id"
     t.index ["review_id"], name: "sqlite_autoindex_reviews_1", unique: true
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "syllabis", primary_key: "syllabus_id", id: :string, force: :cascade do |t|
     t.string   "syllabus_title"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "material_id"
+    t.index ["material_id"], name: "index_syllabis_on_material_id"
     t.index ["syllabus_id"], name: "sqlite_autoindex_syllabis_1", unique: true
   end
 
