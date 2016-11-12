@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109031318) do
+ActiveRecord::Schema.define(version: 20161112083124) do
 
   create_table "books", primary_key: "ISBN", id: :string, force: :cascade do |t|
     t.string   "book_name"
@@ -50,6 +50,15 @@ ActiveRecord::Schema.define(version: 20161109031318) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["note_id"], name: "sqlite_autoindex_notes_1", unique: true
+  end
+
+  create_table "review_connectors", force: :cascade do |t|
+    t.string   "course_id"
+    t.string   "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_review_connectors_on_course_id"
+    t.index ["review_id"], name: "index_review_connectors_on_review_id"
   end
 
   create_table "reviews", primary_key: "review_id", id: :string, force: :cascade do |t|

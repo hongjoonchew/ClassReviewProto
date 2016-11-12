@@ -5,8 +5,11 @@ class CreateCourses < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :description
       add_foreign_key :materials,:courses, name:"material_id"
-
       t.timestamps
     end
+	
+	create_table :reviews do |t|
+	  t.belongs_to :courses, index: true
+	  t.timestamps
   end
 end
