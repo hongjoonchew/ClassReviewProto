@@ -15,6 +15,7 @@ def create
 end
 
   def show
+	@review = Review.where(review_id: params[:course_id])
   end
 
   def index

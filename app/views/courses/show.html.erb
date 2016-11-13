@@ -70,7 +70,11 @@
                 <th>Description</th>
                 </b>
                 </tr>
-
+				
+				<%@review.each do |review| %>
+				<tr>
+				<td><%= review.review %></td>
+				<% end %>
             </div>
         </div>
     </div>
