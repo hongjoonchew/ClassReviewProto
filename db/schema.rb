@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161112083124) do
+ActiveRecord::Schema.define(version: 20161113231334) do
+
+  create_table "ReviewConnectors", force: :cascade do |t|
+    t.string   "course_id"
+    t.string   "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_reviewConnectors_on_course_id"
+    t.index ["review_id"], name: "index_reviewConnectors_on_review_id"
+  end
 
   create_table "books", primary_key: "ISBN", id: :string, force: :cascade do |t|
     t.string   "book_name"
@@ -52,21 +61,14 @@ ActiveRecord::Schema.define(version: 20161112083124) do
     t.index ["note_id"], name: "sqlite_autoindex_notes_1", unique: true
   end
 
-  create_table "review_connectors", force: :cascade do |t|
-    t.string   "course_id"
-    t.string   "review_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_review_connectors_on_course_id"
-    t.index ["review_id"], name: "index_review_connectors_on_review_id"
-  end
-
   create_table "reviews", primary_key: "review_id", id: :string, force: :cascade do |t|
     t.text     "review"
     t.string   "email"
     t.string   "professor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "course_id"
+    t.index ["course_id"], name: "index_reviews_on_course_id"
     t.index ["review_id"], name: "sqlite_autoindex_reviews_1", unique: true
   end
 

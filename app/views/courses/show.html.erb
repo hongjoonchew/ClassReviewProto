@@ -66,14 +66,15 @@
             <table>
                 <tr bgcolor="black" style="color:white;">
                 <b>
-                <th>Reviews</th>
-                <th>Description</th>
+                <th>Professor</th>
+                <th>Review</th>
                 </b>
                 </tr>
 				
-				<%@review.each do |review| %>
+				<%@review.each do |r| %>
 				<tr>
-				<td><%= review.review %></td>
+				<td><%= r.professor %></td>
+				<td><%= r.review %></td>
 				<% end %>
             </div>
         </div>

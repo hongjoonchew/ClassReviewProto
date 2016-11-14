@@ -6,7 +6,7 @@ class CreateReviewConnectors < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 	
-	add_index :review_connectors, :course_id
-	add_index :review_connectors, :review_id
+	add_index :reviewConnectors, :course_id
+	add_index :reviewConnectors, :review_id
   end
 end
