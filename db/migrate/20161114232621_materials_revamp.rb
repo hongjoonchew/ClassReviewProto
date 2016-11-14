@@ -1,6 +1,6 @@
-class RemoveSomeMaterialsKeys < ActiveRecord::Migration[5.0]
+class MaterialsRevamp < ActiveRecord::Migration[5.0]
   def change
-	change_table :materials do |t|
+  change_table :materials do |t|
 	  t.string :course_id
 	  t.string :syllabus_id
 	  t.string :ISBN

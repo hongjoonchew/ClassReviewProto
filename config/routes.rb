@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'reviews/reviewlist'
 
   get 'courses/courselist'
+  
+  get 'syllabus/syllabus'
 
   devise_for :users
 
