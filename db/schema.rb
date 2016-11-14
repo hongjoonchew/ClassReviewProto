@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113231334) do
+ActiveRecord::Schema.define(version: 20161114011838) do
 
   create_table "ReviewConnectors", force: :cascade do |t|
     t.string   "course_id"
@@ -45,9 +45,6 @@ ActiveRecord::Schema.define(version: 20161113231334) do
   end
 
   create_table "materials", primary_key: "material_id", id: :string, force: :cascade do |t|
-    t.string   "books"
-    t.string   "Syllabus"
-    t.text     "notes"
     t.string   "professor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

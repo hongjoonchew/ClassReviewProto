@@ -15,7 +15,9 @@ def create
 end
 
   def show
+	@name = params[:id]
 	@review = Review.where("course_id = ?", params[:id])
+	@materials = Material.where("course_id = ?", params[:id])
   end
 
   def index
