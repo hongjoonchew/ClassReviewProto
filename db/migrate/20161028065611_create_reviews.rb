@@ -5,6 +5,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.text :review
       t.string :email
       t.string :professor
+	  t.string :course_id
 
       t.timestamps
     end

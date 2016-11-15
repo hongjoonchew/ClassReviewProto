@@ -8,8 +8,8 @@ class CreateCourses < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 	
-	create_table :reviews do |t|
+	change_table :reviews do |t|
 	  t.belongs_to :courses, index: true
-	  t.timestamps
   end
+end
 end

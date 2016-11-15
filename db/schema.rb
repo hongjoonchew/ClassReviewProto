@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114232621) do
+ActiveRecord::Schema.define(version: 20161114001758) do
 
   create_table "ReviewConnectors", force: :cascade do |t|
     t.string   "course_id"
@@ -70,10 +70,12 @@ ActiveRecord::Schema.define(version: 20161114232621) do
     t.text     "review"
     t.string   "email"
     t.string   "professor"
+    t.string   "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "course_id"
+    t.integer  "courses_id"
     t.index ["course_id"], name: "index_reviews_on_course_id"
+    t.index ["courses_id"], name: "index_reviews_on_courses_id"
     t.index ["review_id"], name: "sqlite_autoindex_reviews_1", unique: true
   end
 

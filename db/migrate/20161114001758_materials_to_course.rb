@@ -6,7 +6,6 @@ class MaterialsToCourse < ActiveRecord::Migration[5.0]
 	  t.string :ISBN
 	  t.string :note_id
 	end
-	add_foreign_key :courses ,:materials, name: "course_id"
 	add_foreign_key :syllabis, :materials, name: "syllabus_id"
 	add_foreign_key :books, :materials, name: "ISBN"
 	add_foreign_key :notes, :materials, name: "note_id"
