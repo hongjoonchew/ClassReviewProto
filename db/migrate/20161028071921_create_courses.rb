@@ -12,4 +12,5 @@ class CreateCourses < ActiveRecord::Migration[5.0]
 	  t.belongs_to :courses, index: true
 	  t.timestamps
   end
+  end
 end
