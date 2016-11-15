@@ -11,5 +11,5 @@ class CreateCourses < ActiveRecord::Migration[5.0]
 	change_table :reviews do |t|
 	  t.belongs_to :courses, index: true
   end
-end
+  end
 end
