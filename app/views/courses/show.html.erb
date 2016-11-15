@@ -75,12 +75,15 @@
 				<%@review.each do |r| %>
 				<tr>
 				<td><%= r.professor %></td>
-				<td><%= r.review %></td>
+				<td><%= link_to r.review, review_path(r.review_id) %></td>
 				<% end %>
+				
+				<td><%= link_to "Syllabus" %></td>
             </div>
         </div>
+		
     </div>
-
+<%= link_to "Create Review", new_review_path(@name)%>
 </table>
     <br>
     <br>

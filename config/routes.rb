@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 	resources :reviews
   end
   
+  resources :reviews
+  
   resources :reviews do
 	resources :courses
   end

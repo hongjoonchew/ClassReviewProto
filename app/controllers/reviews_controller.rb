@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   def new
     @review  = Review.new
+	@id = params[:format]
   end
 
 def create
@@ -20,6 +21,6 @@ end
 private
 
   def review_params
-    params.require(:review).permit(:email, :course_id, :professor, :review)
+    params.require(:review).permit(:email, :course_id, :professor, :review, :review_id)
   end
 end
