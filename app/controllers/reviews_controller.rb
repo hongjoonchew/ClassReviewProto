@@ -20,6 +20,6 @@ end
 private
 
   def review_params
-    params.require(:review).permit(:user_id, :course_id, :professor, :review)
+    params.require(:review).permit(:email, :course_id, :professor, :review)
   end
 end

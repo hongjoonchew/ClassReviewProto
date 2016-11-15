@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
   def courselist
     @data = Course.all
   end
-  
+
   def new
     @course  = Course.new
   end
@@ -15,6 +15,7 @@ def create
 end
 
   def show
+    @review = Review.where(review_id: params[:course_id]) 
   end
 
   def index

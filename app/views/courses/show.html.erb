@@ -58,7 +58,7 @@
 </head>
 
 <body>
-
+<td><%= link_to "Add a course", new_review_path %></td>
 <div class="container">
     <div class="row">
         <div class="cols-xs-10">
@@ -70,7 +70,12 @@
                 <th>Description</th>
                 </b>
                 </tr>
-
+                <%@review.each do |r| %>
+                      <tr>
+                      <td><%= review.review %></td>
+                      <td><%= r.professor %></td>
+                      <td><%= r.review %></td>
+                <% end %>
             </div>
         </div>
     </div>
