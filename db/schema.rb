@@ -45,6 +45,9 @@ ActiveRecord::Schema.define(version: 20161114001758) do
   end
 
   create_table "materials", primary_key: "material_id", id: :string, force: :cascade do |t|
+    t.string   "books"
+    t.string   "Syllabus"
+    t.text     "notes"
     t.string   "professor"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -70,12 +73,8 @@ ActiveRecord::Schema.define(version: 20161114001758) do
     t.text     "review"
     t.string   "email"
     t.string   "professor"
-    t.string   "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "courses_id"
-    t.index ["course_id"], name: "index_reviews_on_course_id"
-    t.index ["courses_id"], name: "index_reviews_on_courses_id"
     t.index ["review_id"], name: "sqlite_autoindex_reviews_1", unique: true
   end
 
