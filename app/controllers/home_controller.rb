@@ -1,10 +1,6 @@
 class HomeController < ApplicationController
-  def home
+  def contact
+    @problem = Problem.new
   end
 
-  def index
-  end
-
-  def help
-  end
 end

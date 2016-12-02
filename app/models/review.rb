@@ -1,4 +1,5 @@
 class Review < ApplicationRecord
-  self.primary_key= 'review_id'
   belongs_to :course
+  validates :professor, presence: true
+  validates :review, presence: true
 end

@@ -1,104 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Homepage</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
-      color: #f5f6f7;
-  }
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 {
-      background-color: #8bc34a;
-      color: #ffffff;
-  }
-  .bg-2 {
-      background-color: #ffffff; /* Dark Blue */
-      color: #555555;
-  }
-  .bg-3 {
-      background-color:#474e5d ; /* White */
-      color: #ffffff;
-  }
-  .bg-4 {
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
-  }
-  .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-  }
-  .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-  }
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
-  </style>
-</head>
-<body>
+<html>
+  <head>
+    <title>ClassReview</title>
+    <%= csrf_meta_tags %>
 
-<!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://localhost:3000/">Classify</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href=http://localhost:3000/home/help>Help </a></li>
-        <% if user_signed_in? %>
-          <%= link_to "Logout ", destroy_user_session_path,:method=>:delete, :data => { :no_turbolink => false } %>
-      <% else %>
-          <li><%= link_to "Login", new_user_session_path  %></li>
-          <li><%= link_to "Sign Up", new_user_registration_path  %></li>            
-      <% end %>
-        <!li><!a href="#"WHAT</a/li>
-        <!li><!a href="#"WHERE</a/li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-<!-- First Container -->
-<div class="container-fluid bg-1 text-center">
-<%= yield %>
-</div>
+    <td><%= link_to "Home", root_path  %></td>
+    <% if user_signed_in? %>
+        <%= link_to "Logout ", destroy_user_session_path,:method=>:delete, :data => { :no_turbolink => false } %>
+    <% else %>
+        <td><%= link_to "Login", new_user_session_path  %></td>
+        <td><%= link_to "Sign Up", new_user_registration_path  %></td>
+    <% end %>
+<%= link_to "Help", home_help_path %>
+<p id="notice"><%= notice %></p>
+  </head>
 
-
-<!-- Second Container -->
-
-<div class="container-fluid bg-2 text-center">
-  <h3 class="margin">About</h3>
-  <p>Classify is a website that helps students to figure out what a particular course is about, which can help them plan their semester well.</p>
-  <p>The description of the course and the reviews written by the students who have already taken that course help other students to know which course is appropriate for them for the given semester.</p>
-  <p>Classify receives user inputs about class in SJSU. Students who have taken the particular courses can give reviews and tips about the courses. They can share the guidelines, green sheets and difficulty of the exams. Students can suggest what knowledge they should have before class. This website can also help determine how knowledgeable and useful, or easy and passable a class is.
-</p>
-  </a>
-</div>
-<!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
-  <p>@2016 classify.com / All rights reserved/ Powered by FOhF.<a href="http://localhost:3000"> www.Classify.com</a></p>
-</footer>
-
-</body>
+  <body>
+    <%= yield %>
+  </body>
 </html>

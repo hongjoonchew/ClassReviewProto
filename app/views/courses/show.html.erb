@@ -1,95 +1,40 @@
-<h1><%= @name %></h1>
-<hr>
+<h2> <%= @course.course_id %> </h2>
 
-<br>
-<br>
-<head>
-    <style>
-        div{
-        border-radius: 0.6em 0 0 0.6em;
-        }
-        table {
-        border-radius: 0.6em 0 0 0.6em;
-        border-collapse: collapse;
-        width: 100%;
-        color:black;
-        background-color:#e0e2e0;
-        }
+Description:
+  <%= @course.description %>
 
-        th, td {
-        border-radius: 0.6em 0 0 0.6em;
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid black;
+<h2>Reviews</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Professor</th>
+      <th>Review</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-        }
-
-        tbody tr td:first-child
-        {
-        border-radius: 0.6em 0 0 0.6em;
-        background: #e0e2e0;
-        color: black;
-        width: 20%;
-        }
-        tbody td:nth-child(2)
-        {
-        border-radius: 0 0.6em 0.6em 0;
-        background: #e0e2e0;
-        color: black;
-            width: 50%;
-        }
-
-        tbody tr:hover td:first-child
-        {
-        border-radius: 0.6em 0 0 0.6em;
-        background: #e0e2e0;
-        color: red;
-            width: 20%;
-        }
-        tbody tr:hover td:nth-child(2)
-        {
-        border-radius: 0 0.6em 0.6em 0;
-        background: #e0e2e0;
-        color: red;
-            width: 20%;
-        }
-
-        </style>
-</head>
-
-<body>
-
-<div class="container">
-    <div class="row">
-        <div class="cols-xs-10">
-
-            <table>
-                <tr bgcolor="black" style="color:white;">
-                <b>
-                <th>Professor</th>
-                <th>Review</th>
-				<th>Material</th>
-                </b>
-                </tr>
-				
-				<%@review.each do |r| %>
-				<tr>
-				<td><%= r.professor %></td>
-				<td><%= link_to r.review, review_path(r.review_id) %></td>
-				<% end %>
-				
-				<td><%= link_to "Syllabus" %></td>
-            </div>
-        </div>
-		
-    </div >
-    <div class="actions btn btn-default btn-lg" >
-<%= link_to "Create Review", new_review_path(@name)%>
-</div>
-</br>
-</br>
+  <tbody>
+    <% @course.reviews.each do |review| %>
+      <tr>
+        <td><%=review.professor%></td>
+        <td><%= review.review %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
-    <br>
-    <br>
-    <br>
-</body>
+
+<h2>Add a Review:</h2>
+<%= form_for([@course, @course.reviews.build]) do |f| %>
+  <p>
+    <%= f.label "What is the professor's name?" %><br>
+    <%= f.text_field :professor %>
+  </p>
+    <%= f.hidden_field :course_id, :value => @course %>
+  <p>
+    <%= f.label :review %><br>
+    <%= f.text_area :review %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
