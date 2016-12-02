@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: MyString
+  user_id: 
   professor: MyString
-  description: MyText
-  course_id: one
+  review: MyText
+  course: one
 
 two:
-  user_id: MyString
+  user_id: 
   professor: MyString
-  description: MyText
-  course_id: two
+  review: MyText
+  course: two
