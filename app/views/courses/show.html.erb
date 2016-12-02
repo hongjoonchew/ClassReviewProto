@@ -29,12 +29,13 @@ Description:
     <%= f.label "What is the professor's name?" %><br>
     <%= f.text_field :professor %>
   </p>
-    <%= f.hidden_field :course_id, :value => @course %>
+    <%= f.hidden_field :course_id, :value => @course.course_id %>
   <p>
     <%= f.label :review %><br>
     <%= f.text_area :review %>
   </p>
   <p>
+
     <%= f.submit %>
   </p>
 <% end %>

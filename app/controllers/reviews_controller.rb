@@ -4,12 +4,13 @@ class ReviewsController < ApplicationController
     		@course = Course.find(params[:course_id])
 
     		@review = @course.reviews.create(problem_params)
+        @review.course_id=@course.course_id
 
     		redirect_to course_path(@course)
   		end
 
   		private
     		def problem_params
-      		params.require(:review).permit(:professor, :review)
+      		params.require(:review).permit(:professor, :review, :course_id)
         end
 end

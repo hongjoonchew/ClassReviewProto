@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20161127082328) do
     t.integer  "user_id"
     t.string   "professor"
     t.text     "review"
-    t.integer  "course_id"
+    t.string   "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_reviews_on_course_id"
