@@ -83,7 +83,7 @@ Description:
 <h2>Add a Review:</h2>
 <% if user_signed_in? %>
   <%= form_for([@course, @course.reviews.build]) do |f| %>
-  <!%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
     <p>
       <%= f.label "What is the professor's name?" %><br><font color="black">
         <%= f.text_field :professor %></font>
