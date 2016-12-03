@@ -1,4 +1,5 @@
 class Course < ApplicationRecord
   has_many :reviews
-  validates_uniqueness_of :course_id
+  validates :course_id, uniqueness: true, presence: true
+  validates :description, presence: true
 end

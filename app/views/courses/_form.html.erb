@@ -1,9 +1,10 @@
 <%= form_for(course) do |f| %>
+
   <% if course.errors.any? %>
     <div id="error_explanation">
       <% course.errors.full_messages.each do |message| %>
       <font color = "red">
-        <ul><%= "Course is already in the database" %></ul>
+        <ul><%= message %></ul>
         <font color = "white">
       <% end %>
       </ul>

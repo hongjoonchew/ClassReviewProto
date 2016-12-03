@@ -11,6 +11,6 @@ class ReviewsController < ApplicationController
 
   		private
     		def problem_params
-      		params.require(:review).permit(:professor, :review, :course_id)
+      		params.require(:review).permit(:user_id, :professor, :review, :course_id)
         end
 end
