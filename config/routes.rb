@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  get 'materials/new'
+
+  get 'materials/show'
+
   devise_for :users
   resources :courses do
     resources :reviews
+	resources :materials
   end
 
 devise_scope :user do
@@ -10,7 +15,6 @@ end
   
 resources :users
 resources :problems
-
 
 
   get 'home/contact'

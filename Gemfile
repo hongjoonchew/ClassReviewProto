@@ -49,3 +49,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'listen', '~> 3.0.5'
 
 gem 'wdm' , '>= 0.1.0' if Gem.win_platform?
+
+gem 'paperclip', '~> 4.2'

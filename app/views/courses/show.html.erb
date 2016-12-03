@@ -56,7 +56,23 @@
 Description:
   <%= @course.description %>
 
-<h2>Reviews</h2>
+<h2>Professors Teaching</h2>
+
+<table>
+  <div class="container">
+    <div class="row">
+  <thead>
+   </thead>
+      <tbody>
+    <% @course.reviews.select("DISTINCT(Professor)").each do |review| %>
+      <tr>
+        <td><%=link_to review.professor, course_material_path(:professor => review.professor, :course_id => params[:id])%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Review</h2>
 
 <table>
   <div class="container">

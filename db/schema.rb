@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20161203012905) do
   end
 
   create_table "materials", primary_key: "materials_id", id: :string, force: :cascade do |t|
+    t.string   "professor"
+    t.integer  "ISBN"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["materials_id"], name: "sqlite_autoindex_materials_1", unique: true
