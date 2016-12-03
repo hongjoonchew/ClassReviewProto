@@ -1,0 +1,74 @@
+<%= current_user.email %>
+<% @review.each do |review| %>
+<br>
+<br>
+    <style>
+        div{
+        border-radius: 0.6em 0 0 0.6em;
+        }
+        table {
+        border-radius: 0.6em 0 0 0.6em;
+        border-collapse: collapse;
+        width: 100%;
+        color:black;
+        background-color:#e0e2e0;
+        }
+
+        th, td {
+        border-radius: 0.6em 0 0 0.6em;
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid black;
+
+        }
+
+        tbody tr td:first-child
+        {
+        border-radius: 0.6em 0 0 0.6em;
+        background: #e0e2e0;
+        color: black;
+        width: 20%;
+        }
+        tbody td:nth-child(2)
+        {
+        border-radius: 0 0.6em 0.6em 0;
+        background: #e0e2e0;
+        color: black;
+            width: 50%;
+        }
+
+        tbody tr:hover td:first-child
+        {
+        border-radius: 0.6em 0 0 0.6em;
+        background: #e0e2e0;
+        color: red;
+            width: 20%;
+        }
+        tbody td:first-child
+        {
+        border-radius: 0 0.6em 0.6em 0;
+        background: #e0e2e0;
+        color: red;
+            width: 20%;
+        }
+
+        </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="cols-xs-10">
+<table>
+  <tbody>
+    <th>Course</th>
+     <th>Review</th>
+  <tr>
+    <td><%=review.course_id%></td>
+    <td><%= review.review %></td>
+  </tr>
+</tbody>
+</table>
+</body>
+<% end %>
