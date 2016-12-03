@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20161203012905) do
     t.integer  "user_id"
     t.string   "professor"
     t.text     "review"
+    t.float    "rating"
     t.string   "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

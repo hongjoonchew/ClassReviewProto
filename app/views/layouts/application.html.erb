@@ -64,6 +64,7 @@
     </div>
       <div class = "nav navbar-nav navbar-right" id="myNavbar">
     <% if user_signed_in? %>
+        <td><%= link_to "Comments", user_index_path  %></td>
         <%= link_to "Logout ", destroy_user_session_path,:method=>:delete, :data => { :no_turbolink => false } %>
     <% else %>
         <td><%= link_to "Login", new_user_session_path  %></td>
