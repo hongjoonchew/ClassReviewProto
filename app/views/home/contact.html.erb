@@ -3,15 +3,25 @@
 <%= form_for @problem do |f| %>
 <div class="field">
   <%= f.label :email%>
-  <%= f.text_field :email %>
+    <br>
+    <font color = "black"> 
+        <%= f.text_field :email %>
+    </font>
 </div>
 
+<br>
 <div class="field">
   <%= f.label :problem %>
+    <br>
+    <font color = "black">
   <%= f.text_area :problem %>
+    </font>
 </div>
 
+<br>
 <div class="actions">
+    <font color = "black">
   <%= f.submit "Send" %>
+    </font>
 </div>
 <% end %>
