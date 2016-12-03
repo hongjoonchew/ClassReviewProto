@@ -1,10 +1,67 @@
+<head>
+    <style>
+        div{
+        border-radius: 0.6em 0 0 0.6em;
+        }
+        table {
+        border-radius: 0.6em 0 0 0.6em;
+        border-collapse: collapse;
+        width: 100%;
+        color:black;
+        background-color:#e0e2e0;
+        }
+
+        th, td {
+        border-radius: 0.6em 0 0 0.6em;
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid black;
+
+        }
+
+        tbody tr td:first-child
+        {
+        border-radius: 0.6em 0 0 0.6em;
+        background: #e0e2e0;
+        color: black;
+        width: 20%;
+        }
+        tbody td:nth-child(2)
+        {
+        border-radius: 0 0.6em 0.6em 0;
+        background: #e0e2e0;
+        color: black;
+            width: 50%;
+        }
+
+        tbody tr:hover td:first-child
+        {
+        border-radius: 0.6em 0 0 0.6em;
+        background: #e0e2e0;
+        color: red;
+            width: 20%;
+        }
+        tbody td:first-child
+        {
+        border-radius: 0 0.6em 0.6em 0;
+        background: #e0e2e0;
+        color: red;
+            width: 20%;
+        }
+
+        </style>
 <h2> <%= @course.course_id %> </h2>
+
 
 Description:
   <%= @course.description %>
 
 <h2>Reviews</h2>
+
 <table>
+  <div class="container">
+    <div class="row">
+        <div class="cols-xs-10">
   <thead>
     <tr>
       <th>Professor</th>
@@ -12,8 +69,7 @@ Description:
       <th colspan="3"></th>
     </tr>
   </thead>
-
-  <tbody>
+      <tbody>
     <% @course.reviews.each do |review| %>
       <tr>
         <td><%=review.professor%></td>
@@ -21,18 +77,19 @@ Description:
       </tr>
     <% end %>
   </tbody>
+
 </table>
 
 <h2>Add a Review:</h2>
 <%= form_for([@course, @course.reviews.build]) do |f| %>
   <p>
-    <%= f.label "What is the professor's name?" %><br>
-    <%= f.text_field :professor %>
+    <%= f.label "What is the professor's name?" %><br><font color="black">
+    <%= f.text_field :professor %></font>
   </p>
     <%= f.hidden_field :course_id, :value => @course.course_id %>
   <p>
-    <%= f.label :review %><br>
-    <%= f.text_area :review %>
+    <%= f.label :review %><br><font color = "black">
+    <%= f.text_area :review %><font>
   </p>
   <p>
 
