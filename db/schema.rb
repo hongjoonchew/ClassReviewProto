@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161127082328) do
+ActiveRecord::Schema.define(version: 20161203010606) do
 
   create_table "courses", primary_key: "course_id", id: :string, force: :cascade do |t|
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["course_id"], name: "sqlite_autoindex_courses_1", unique: true
+  end
+
+  create_table "materials", primary_key: "materials_id", id: :string, force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["materials_id"], name: "sqlite_autoindex_materials_1", unique: true
   end
 
   create_table "problems", force: :cascade do |t|
