@@ -67,13 +67,13 @@
   <tbody>
     <th>Course</th>
       <th>Description</th>
+	  <th>No. of Reviews</th>
     <% @courses.each do |course| %>
       <tr>
         <td><%= link_to course.course_id, course%></td>
         <td><%= course.description %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+		<td><%= course.reviews.size %></td>
+        </tr>
     <% end %>
   </tbody>
 
