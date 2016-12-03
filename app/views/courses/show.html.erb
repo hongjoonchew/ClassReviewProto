@@ -81,18 +81,23 @@ Description:
 </table>
 
 <h2>Add a Review:</h2>
-<%= form_for([@course, @course.reviews.build]) do |f| %>
-  <p>
-    <%= f.label "What is the professor's name?" %><br><font color="black">
-    <%= f.text_field :professor %></font>
-  </p>
-    <%= f.hidden_field :course_id, :value => @course.course_id %>
-  <p>
-    <%= f.label :review %><br><font color = "black">
-    <%= f.text_area :review %><font>
-  </p>
-  <p>
+<% if user_signed_in? %>
+  <%= form_for([@course, @course.reviews.build]) do |f| %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+    <p>
+      <%= f.label "What is the professor's name?" %><br><font color="black">
+        <%= f.text_field :professor %></font>
+      </p>
+      <%= f.hidden_field :course_id, :value => @course.course_id %>
+      <p>
+        <%= f.label :review %><br><font color = "black">
+          <%= f.text_area :review %><font>
+          </p>
+          <p>
 
-    <%= f.submit %>
-  </p>
-<% end %>
+            <%= f.submit %>
+          </p>
+          <% end %>
+      <% else %>
+          <td><%= link_to "Login to review a course", new_user_session_path  %></td>
+    <% end %>

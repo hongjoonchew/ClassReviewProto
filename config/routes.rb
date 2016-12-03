@@ -4,7 +4,14 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+devise_scope :user do
+   get '/users/sign_out' => 'devise/sessions#destroy'
+end
+
+resources :user
 resources :problems
+
+
 
   get 'home/contact'
   get 'home/help'

@@ -1,9 +1,7 @@
-<h1>Course List</h1>
-<hr>
-<!--<p>Find me in app/views/courses/courselist.html.erb</p>-->
+<%= current_user.email %>
+<% @review.each do |review| %>
 <br>
 <br>
-<head>
     <style>
         div{
         border-radius: 0.6em 0 0 0.6em;
@@ -62,44 +60,15 @@
 <div class="container">
     <div class="row">
         <div class="cols-xs-10">
-
-            <%= form_tag("/search", method: "get") do %>
-            <%= label_tag(:q, "Search for:") %>
-            <font color = "black">
-            <%= text_field_tag(:q) %>            
-            <%= submit_tag("Search") %>
-            </font>
-            <% end %>
-            
-            <br>
-            <br>
-            <table>
+<table>
   <tbody>
     <th>Course</th>
-      <th>Description</th>
-	  <th>No. of Reviews</th>
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= link_to course.course_id, course%></td>
-        <td><%= course.description %></td>
-		<td><%= course.reviews.size %></td>
-		
-		<td><%if current_user.try(:admin)  %>
-		<%= link_to 'Edit', edit_course_path(course) %>
-		<% end %></td>
-        <td><%if current_user.try(:admin)  %>
-		<%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %>
-		<% end %></td>
-		
-		</tr>
-    <% end %>
-	
-  </tbody>
+     <th>Review</th>
+  <tr>
+    <td><%=review.course_id%></td>
+    <td><%= review.review %></td>
+  </tr>
+</tbody>
 </table>
-<%= link_to image_tag("/addcourse.png",border:0),{action:'new', controller: 'courses'} %>
-    <br>
-    <br>
-    <br>
 </body>
-<h1>Courses</h1>
-
+<% end %>
