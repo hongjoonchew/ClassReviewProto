@@ -19,12 +19,16 @@ ActiveRecord::Schema.define(version: 20161203012905) do
     t.index ["course_id"], name: "sqlite_autoindex_courses_1", unique: true
   end
 
-  create_table "materials", primary_key: "materials_id", id: :string, force: :cascade do |t|
+  create_table "materials", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
     t.string   "professor"
+    t.string   "apparatus"
     t.integer  "ISBN"
+    t.string   "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["materials_id"], name: "sqlite_autoindex_materials_1", unique: true
+    t.index ["course_id"], name: "index_materials_on_course_id"
   end
 
   create_table "problems", force: :cascade do |t|

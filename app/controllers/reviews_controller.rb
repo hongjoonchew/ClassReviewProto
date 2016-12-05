@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
     		@course = Course.find(params[:course_id])
 
     		@review = @course.reviews.create(review_params)
-        @review.course_id=@course.course_id
+			@review.course_id=@course.course_id
 
     		redirect_to course_path(@course)
   		end

@@ -1,2 +1,30 @@
-<h1>Materials#new</h1>
-<p>Find me in app/views/materials/new.html.erb</p>
+<h1>New Material: <%=params[:apparatus] %></h1>
+<%= form_for([@course, @course.materials.build]) do |f| %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :professor, :value => params[:professor] %>
+  <%= f.hidden_field :course_id, :value => params[:course_id] %>
+  <%= f.hidden_field :apparatus, :value => params[:apparatus] %>
+  <font color = black>
+<div class = "field">
+  <%= f.label :name %>
+</div>
+
+<div class = "field">
+  <%= f.text_field :name %>
+  </div>
+  
+<% if params[:apparatus] == "Book" %>
+  <div class = "field">
+	<%= f.label "ISBN Number" %>
+  </div>
+  <div class = "field">
+	<%= f.text_field :ISBN %>
+  </div>
+<% end %>
+<% if params[:apparatus] == "Syllabus" %>
+	<h3> Just temporarily not done </h3>
+ <% end %>
+   <div class ="btn btn-lg"><font color = "black">
+    <%= f.submit %>
+  </div>
+<% end %>
