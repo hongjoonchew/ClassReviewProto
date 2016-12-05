@@ -1,0 +1,35 @@
+<%= form_for review do |f| %>
+
+  <% if review.errors.any? %>
+    <div id="error_explanation">
+      <% course.errors.full_messages.each do |message| %>
+      <font color = "red">
+        <ul><%= message %></ul>
+        <font color = "white">
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :professor %>
+  </div>
+
+  <div>
+    <font color = "black">
+    <%= f.text_field :professor %></font>
+  </div>
+
+  <div class="field">
+    <%= f.label :review %>
+  </div>
+
+  <div>
+    <font color = "black">
+    <%= f.text_area :review %>
+  </div> </font>
+
+   <div class ="btn btn-lg"><font color = "black">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -15,7 +15,7 @@ end
 
 resources :user
 resources :problems
-
+resources :reviews
 
   get 'home/contact'
   get 'home/help'
