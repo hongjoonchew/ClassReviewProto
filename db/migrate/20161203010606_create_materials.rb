@@ -9,5 +9,6 @@ class CreateMaterials < ActiveRecord::Migration[5.0]
 	  t.references :course, foreign_key: true, type: :string
 		t.timestamps
 	end
+	add_foreign_key :materials, :courses, column: :course_id, primary_key: :course_id
   end
 end

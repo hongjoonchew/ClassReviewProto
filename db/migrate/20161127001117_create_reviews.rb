@@ -9,5 +9,6 @@ class CreateReviews < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+	add_foreign_key :reviews, :courses, column: :course_id, primary_key: :course_id
   end
 end
