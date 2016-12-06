@@ -60,9 +60,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <td> <%= link_to "Classify", root_path %> </td>
+      <td><h2> <%= link_to "Classify", root_path %> </h2></td>
     </div>
-      <div class = "nav navbar-nav navbar-right" id="myNavbar">
+      <div class = "nav navbar-nav navbar-right" id="myNavbar" >
     <% if user_signed_in? %>
         <td><%= link_to "Comments", user_index_path  %></td>
         <%= link_to "Logout ", destroy_user_session_path,:method=>:delete, :data => { :no_turbolink => false } %>
