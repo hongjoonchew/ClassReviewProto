@@ -5,6 +5,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.string :professor
       t.text :review
       t.float :rating
+      t.references :course, foreign_key: true, type: :string
 
       t.timestamps
     end
