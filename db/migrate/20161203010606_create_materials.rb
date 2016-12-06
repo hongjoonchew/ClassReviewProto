@@ -6,7 +6,6 @@ class CreateMaterials < ActiveRecord::Migration[5.0]
 	  t.string :professor
 	  t.string :apparatus
 	  t.integer :ISBN
-	  t.references :course, foreign_key: true, type: :string
 		t.timestamps
 	end
   end
