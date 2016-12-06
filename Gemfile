@@ -57,4 +57,6 @@ gem 'listen', '~> 3.0.5'
 
 gem 'wdm' , '>= 0.1.0' if Gem.win_platform?
 
-gem 'paperclip', '~> 4.2'
+gem 'paperclip', '~> 3.5.3'
+
+gem 'aws-sdk', '<2.0'

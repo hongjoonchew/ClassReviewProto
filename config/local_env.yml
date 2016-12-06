@@ -1,0 +1,10 @@
+# Rename this file to local_env.yml
+# Add account settings and API keys here.
+# This file should be listed in .gitignore to keep your settings secret!
+# Each entry gets set as a local environment variable.
+# This file overrides ENV variables in the Unix shell.
+
+AWS_REGION: 'us-west-1'
+S3_BUCKET_NAME: classify131
+AWS_SECRET_ACCESS_KEY: /uwhWKNyBKn5kT+kazpxKwc/a1PeX2BsQoS666xu
+AWS_ACCESS_KEY_ID: AKIAITSUBXOVHQ4S4CVQ
