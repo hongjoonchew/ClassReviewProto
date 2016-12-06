@@ -58,5 +58,3 @@ gem 'listen', '~> 3.0.5'
 gem 'wdm' , '>= 0.1.0' if Gem.win_platform?
 
 gem 'paperclip', '~> 4.2'
-
-gem 'ruby', '2.2.6'
