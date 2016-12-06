@@ -23,6 +23,6 @@ class MaterialsController < ApplicationController
   
   private
       def material_params
-       params.require(:material).permit(:user_id, :apparatus, :professor, :course_id, :name, :ISBN)
+       params.require(:material).permit(:user_id, :apparatus, :professor, :course_id, :name, :ISBN, :image)
       end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161203012905) do
+ActiveRecord::Schema.define(version: 20161206014841) do
 
   create_table "courses", primary_key: "course_id", id: :string, force: :cascade do |t|
     t.text     "description"
@@ -26,8 +26,12 @@ ActiveRecord::Schema.define(version: 20161203012905) do
     t.string   "apparatus"
     t.integer  "ISBN"
     t.string   "course_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["course_id"], name: "index_materials_on_course_id"
   end
 
@@ -42,7 +46,8 @@ ActiveRecord::Schema.define(version: 20161203012905) do
     t.integer  "user_id"
     t.string   "professor"
     t.text     "review"
-    t.integer  "course_id"
+    t.float    "rating"
+    t.string   "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_reviews_on_course_id"

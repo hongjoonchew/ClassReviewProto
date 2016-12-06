@@ -22,7 +22,10 @@
   </div>
 <% end %>
 <% if params[:apparatus] == "Syllabus" %>
-	<h3> Just temporarily not done </h3>
+	<div class = "form-group">
+	<%= f.label "File" %>
+	<%= f.file_field :image %>
+	</div>
  <% end %>
    <div class ="btn btn-lg"><font color = "black">
     <%= f.submit %>

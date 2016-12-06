@@ -82,6 +82,7 @@
 	<% @syllabi.each do |material| %>
 	 <tr>
 		<td><%=material.name %></td>
+		<td><%= link_to "File", material.file.url %>
 	</tr>	
 	<% end %>
  </tbody>
