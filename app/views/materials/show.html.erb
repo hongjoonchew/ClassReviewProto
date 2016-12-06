@@ -1,0 +1,96 @@
+<h1><%=params[:professor]%> </h1>
+<h2>Course Material</h2>
+
+<style>
+        div{
+        border-radius: 0.6em 0 0 0.6em;
+        }
+        table {
+        border-radius: 0.6em 0 0 0.6em;
+        border-collapse: collapse;
+        width: 100%;
+        color:black;
+        background-color:#e0e2e0;
+        }
+
+        th, td {
+        border-radius: 0.6em 0 0 0.6em;
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid black;
+
+        }
+
+        tbody tr td:first-child
+        {
+        border-radius: 0.6em 0 0 0.6em;
+        background: #e0e2e0;
+        color: black;
+        width: 20%;
+        }
+        tbody td:nth-child(2)
+        {
+        border-radius: 0 0.6em 0.6em 0;
+        background: #e0e2e0;
+        color: black;
+            width: 50%;
+        }
+
+        tbody tr:hover td:first-child
+        {
+        border-radius: 0.6em 0 0 0.6em;
+        background: #e0e2e0;
+        color: red;
+            width: 20%;
+        }
+        tbody td:first-child
+        {
+        border-radius: 0 0.6em 0.6em 0;
+        background: #e0e2e0;
+        color: red;
+            width: 20%;
+        }
+
+        </style>
+
+<h2>Professors Teaching</h2>
+
+<table>
+  <div class="container">
+    <div class="row">
+  <thead> <th>Books</th> <th>ISBN</th>
+   </thead>
+      <tbody>
+    <% @books.each do |material| %>
+      <tr>
+        <td><%=material.name %></td>
+
+        <td><%=material.ISBN %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<table>
+    <div class="container">
+    <div class="row">
+      <thread>
+      <th>Syllabi</th>
+    </tr>
+  </thead>
+      <tbody>
+	<% @syllabi.each do |material| %>
+	 <tr>
+		<td><%=material.name %></td>
+	</tr>	
+	<% end %>
+ </tbody>
+</table> 
+
+<h2>Add a Material:</h2>
+<% if user_signed_in? %>
+  <td><%= link_to "Book", new_course_material_path(:apparatus => "Book", :professor => params[:professor], :course_id => params[:course_id], :user_id => current_user.id)  %></td>
+  <td><%= link_to "Syllabus", new_course_material_path(:apparatus => "Syllabus", :professor => params[:professor], :course_id => params[:course_id], :user_id => current_user.id) %></td>
+  <% else %>
+   <td><%= link_to "Login to create materials", new_user_session_path  %></td>
+ <% end %>

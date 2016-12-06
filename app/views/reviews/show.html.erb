@@ -1,0 +1,9 @@
+<% if user_signed_in? && current_user.id==@review.user_id %>
+    <h1>Editing Review</h1>
+
+    <%= render 'form', review: @review %>
+
+    <%= link_to 'Back', user_index_path %>
+    <% else %>
+    <h1>Cannot Edit other people's reviews.</h1>
+    <% end %>
