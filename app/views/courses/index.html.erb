@@ -63,19 +63,10 @@
     <div class="row">
         <div class="cols-xs-10">
             
-            
-
-<%= form_tag("/search", method: "get") do %> 
-            <%= label_tag(:q, "Search for:") %> 
-            <font color = "black"> 
-            <%= text_field_tag(:q) %>             
-            <%= submit_tag("Search") %> 
-            </font> 
-            <% end %> 
 
             <br>
             <br>
-		
+
             <table>
   <tbody>
     <th>Course</th>
@@ -86,17 +77,17 @@
         <td><%= link_to course.course_id, course%></td>
         <td><%= course.description %></td>
 		<td><%= course.reviews.size %></td>
-		
+
 		<td><%if current_user.try(:admin)  %>
 		<%= link_to 'Edit', edit_course_path(course) %>
 		<% end %></td>
         <td><%if current_user.try(:admin)  %>
 		<%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %>
 		<% end %></td>
-		
+
 		</tr>
     <% end %>
-	
+
   </tbody>
 </table>
 <br>
@@ -106,4 +97,3 @@
     <br>
     <br>
 </body>
-
